@@ -11,8 +11,8 @@ function validateCalcOperation($PostOperationName, &$errs)
         $PostOperationName = trim($_POST[$PostOperationName]);
         if (!preg_match('/^[+\-\*\/]{1}$/', $PostOperationName))
         {
-            $errs[$PostOperationName] = '<div style = \'color: red;\'> Invalid type of operation ' .
-                "$PostOperationName";
+            $errs[$PostOperationName] = '<div style = \'color: red;\'> 
+                Invalid type of operation ' . "$PostOperationName";
         }
         return $PostOperationName;
     }
